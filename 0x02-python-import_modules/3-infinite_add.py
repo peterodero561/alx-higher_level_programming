@@ -11,4 +11,3 @@ if __name__ == "__main__":
         for i in range(1, num_args + 1):
             result += int(argv[i])
         print("{}".format(result))
-
