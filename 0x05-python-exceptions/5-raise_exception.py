@@ -2,5 +2,5 @@
 def raise_exception():
     try:
         result = 2 + '2'
-    except TypeError as e:
+    except TypeError as te:
         print("Exception raised")
