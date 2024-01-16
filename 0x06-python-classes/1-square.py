@@ -2,7 +2,7 @@
 '''this is a class defining a square'''
 
 
-def Square:
+class Square:
 
     '''
     a class of a square
