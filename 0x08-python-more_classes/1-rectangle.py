@@ -5,34 +5,11 @@
 class Rectangle:
     '''class for a rectangle object'''
 
-    def __init__(self, width=0, height=0):
-        '''init - initializes the height and the width'''
-
-        self.width = width
-        self.height = height
-
-    @property
-    def width(self):
-        '''getter for the width of the rectangle object'''
-
-        self.__width = width
-
-    @width.setter
-    def width(self, value):
-        '''Setter for the width of the rectangle object'''
-
-        if not isinstance(value, int):
-            raise TypeError('Width Must be an integer')
-        elif value < 0:
-            raise ValueError('Width must be >= 0')
-        else:
-            self.__width = value
-
     @property
     def height(self):
         '''getter for the height of the rectangle object'''
 
-        self.__height = height
+        self._height = height
 
     @height.setter
     def height(self, value):
@@ -43,4 +20,31 @@ class Rectangle:
         elif value < 0:
             raise ValueError('Width must be >= 0')
         else:
-            self.__height = value
+            self._height = value
+
+
+    @property
+    def width(self):
+        '''getter for the width of the rectangle object'''
+
+        self._width = width
+
+    @width.setter
+    def width(self, value):
+        '''Setter for the width of the rectangle object'''
+
+        if not isinstance(value, int):
+            raise TypeError('Width Must be an integer')
+        elif value < 0:
+            raise ValueError('Width must be >= 0')
+        else:
+            self._width = value
+
+    def __init__(self, width=0, height=0):
+        '''init - initializes the height and the width'''
+
+        self.width = width
+        self.height = height
+        self._width = 0
+        self._height = 0
+
