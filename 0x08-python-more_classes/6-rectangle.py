@@ -80,5 +80,3 @@ class Rectangle:
         '''Says goobye at the deletion of a object'''
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-
-
