@@ -62,7 +62,7 @@ class Rectangle:
         '''prints the rectangle with the character #
             if either width or height is 0 an empty string is attached
         '''
-        if self.width == 0 or self.height ==  0:
+        if self.width == 0 or self.height == 0:
             return ""
         else:
             return "\n".join(["#" * self.width] * self.height)
