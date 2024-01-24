@@ -1,0 +1,32 @@
+#!/usr/bin/python3
+'''Tests for BaseGeometry class'''
+
+import unittest
+from models.base_geometry import BaseGeometry
+
+class TestBaseGeometry(unittest.TestCase):
+    def setUp(self):
+        # Create an instance of BaseGeometry to use in tests
+        self.base_geometry = BaseGeometry()
+
+    def test_area_exception(self):
+        # Test if calling area() raises an Exception
+        with self.assertRaises(Exception) as context:
+            self.base_geometry.area()
+        self.assertEqual(str(context.exception), "area() is not implemented")
+
+    def test_integer_validator_valid(self):
+        # Test if integer_validator accepts a valid value
+        self.base_geometry.integer_validator("test", 5)  # Should not raise an exception
+
+    def test_integer_validator_invalid_type(self):
+        # Test if integer_validator raises TypeError for invalid type
+        with self.assertRaises(TypeError) as context:
+            self.base_geometry.integer_validator("test", "invalid")
+        self.assertEqual(str(context.exception), "test must be an integer")
+
+    def test_integer_validator_invalid_value(self):
+        # Test if integer_validator raises ValueError for invalid value
+        with self.assertRaises(ValueError) as context:
+            self.base_geometry.integer_validator("test", 0)
+        self.assertEqual(str(context.exception), "test must be greater than 0")
