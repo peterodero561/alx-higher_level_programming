@@ -19,7 +19,7 @@ class BaseGeometry:
 class Rectangle(BaseGeometry):
     '''subclass of BaseGeometry'''
 
-    def __int__(self, width, height):
+    def __init__(self, width, height):
         '''Intializes the sides of a Rectangle object'''
         super().__init__()
         self.__width = 0
