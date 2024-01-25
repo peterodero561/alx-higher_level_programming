@@ -5,6 +5,6 @@
 def to_json_sting(my_obj):
     '''
     function that returns the JSON representation of an
-    object (string)
+    object
     '''
     return json.dumps(my_obj)
