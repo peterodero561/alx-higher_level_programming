@@ -16,6 +16,7 @@ class BaseGeometry:
         elif value <= 0:
             raise ValueError("{} must be an integer".format(name))
 
+
 class Rectangle(BaseGeometry):
     '''subclass of BaseGeometry'''
 
