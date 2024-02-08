@@ -1,0 +1,37 @@
+#!/usr/bin/python3
+import unittest
+'''test case for tha add integer()'''
+class TestAddIntegerFunction(unittest.TestCase):
+'''class containig test methods for the add_integer()'''
+    def test_add_integer(self):
+        '''Test adding two integers'''
+        result = add_integer(5, 3)
+        self.assertEqual(result, 8)
+
+    def test_add_float_and_integer(self):
+        '''Test adding a float and an integer'''
+        result = add_integer(5.5, 3)
+        self.assertEqual(result, 8)
+
+    def test_add_integer_and_float(self):
+        '''Test adding an integer and a float'''
+        result = add_integer(5, 3.5)
+        self.assertEqual(result, 8)
+
+    def test_add_floats(self):
+        '''Test adding two floats'''
+        result = add_integer(5.5, 3.5)
+        self.assertEqual(result, 8)
+
+    def test_add_invalid_inputs(self):
+        '''Test adding invalid inputs'''
+        with self.assertRaises(TypeError):
+            add_integer("5", 3)
+        with self.assertRaises(TypeError):
+            add_integer(5, "3")
+        with self.assertRaises(TypeError):
+            add_integer("5", "3")
+        with self.assertRaises(TypeError):
+            add_integer([], 3)
+        with self.assertRaises(TypeError):
+            add_integer(5, [])
