@@ -1,10 +1,10 @@
 -- a script that lists all tables of a database in sql server
 -- database name will be passed as argument
-if [ $# -ne 1 ];then
-	echo "Usage: $0 <database>"
-	exit 1
-fi
+-- if [ $# -ne 1 ];then
+--	echo "Usage: $0 <database>"
+--	exit 1
+--fi
 
-database=$1
+--database=$1
 
-mysql -e "USE $database; SHOW TABLE;"
+USE mysql; SHOW TABLE;
