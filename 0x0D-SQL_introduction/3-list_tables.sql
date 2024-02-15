@@ -5,7 +5,7 @@ DELIMITER $$
 DROP PROCEDURE IF EXISTS ListTables;
 CREATE PROCEDURE ListTables(IN dbName VARCHAR(255))
 BEGIN
-	SET @query = CONCAT("USE", dbName, ";");
+	SET @query = CONCAT("USE ", dbName, ";");
 	PREPARE stmt FROM @query;
 	EXECUTE stmt;
 	DEALLOCATE PREPARE stmt;
