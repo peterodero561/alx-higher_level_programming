@@ -1,10 +1,14 @@
+-- #!/usr/bin/env bash
 -- a script that lists all tables of a database in sql server
--- database name will be passed as argument
--- if [ $# -ne 1 ];then
---	echo "Usage: $0 <database>"
---	exit 1
---fi
 
---database=$1
-
-USE mysql; SHOW TABLE;
+DELIMITER $$
+DROP PROCEDURE IF EXISTS ListTables;
+CREATE PROCEDURE ListTables(IN dbName VARCHAR(255))
+BEGIN
+	SET @query = CONCAT("USE ", dbName, ";");
+	PREPARE stmt FROM @query;
+	EXECUTE stmt;
+	DEALLOCATE PREPARE stmt;
+	SHOW TABLES;
+END$$
+DELIMITER ;
