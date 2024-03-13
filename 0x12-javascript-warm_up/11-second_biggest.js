@@ -14,6 +14,5 @@ if (process.argv.length <= 3) {
       max2 = num; // Update max2 to the second maximum value
     }
   }
-  console.log(max);
   console.log(max2);
 }
