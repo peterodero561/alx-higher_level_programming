@@ -2,7 +2,6 @@
 const fs = require('fs');
 
 function concatFiles(file1Path, file2Path, destinationPath) {
-    try {
         // Read the content of the first file
         const data1 = fs.readFileSync(file1Path, 'utf8');
         
@@ -15,10 +14,7 @@ function concatFiles(file1Path, file2Path, destinationPath) {
         // Write the concatenated data to the destination file
         fs.writeFileSync(destinationPath, concatenatedData);
         
-        console.log("Files concatenated successfully!");
-    } catch (err) {
-        console.error("An error occurred:", err);
-    }
+        
 }
 
 // Check if arguments are provided
