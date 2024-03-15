@@ -1,2 +1,2 @@
 # 0x0F. Python - Object-relational mapping
-![Python Badge](https://img.shields.io/badge/Python-FFA500)
+![**Python** Badge](https://img.shields.io/badge/Python-FFA500)
