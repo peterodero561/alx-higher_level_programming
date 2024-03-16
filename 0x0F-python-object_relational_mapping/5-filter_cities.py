@@ -15,7 +15,9 @@ def listCitiesArg(username, password, database, arg):
     cursor = db.cursor()
 
     # SQL statement
-    queryTemp = ("SELECT cities.name FROM cities INNER JOIN states ON cities.state_id = states.id WHERE states.name LIKE % s ORDER BY cities.id ASC")
+    queryTemp = ("SELECT cities.name FROM cities INNER JOIN states "
+            "ON cities.state_id = states.id WHERE states.name LIKE % s "
+            "ORDER BY cities.id ASC")
     cursor.execute(queryTemp, (arg, ))
 
     # Fetch and print cities
