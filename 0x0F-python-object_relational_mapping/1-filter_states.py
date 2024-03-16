@@ -19,7 +19,7 @@ def listStatesN(userName, password, database):
     # SQL statement to get states
     cursor.execute(
             "SELECT * FROM states "
-            "WHERE state.name LIKE 'N%' ORDER BY states.id ASC")
+            "WHERE states.name LIKE 'N%' ORDER BY states.id ASC")
 
     # Fetch and print all the states
     states = cursor.fetchall()
