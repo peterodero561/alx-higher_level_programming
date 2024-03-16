@@ -8,7 +8,7 @@ def listStatesN(username, password, database):
     '''Function to list states starting with N'''
     # Connect to the database
     db = MySQLdb.connect(
-            host='localhost', port=3306, user=username,
+            host="localhost", port=3306, user=username,
             passwd=password, db=database)
 
     # Create a cursor object
@@ -22,14 +22,14 @@ def listStatesN(username, password, database):
 
     # Display the results
     for state in states:
-        print(state[::-1])
+        print(state)
 
     # Close cursor and database connection
     cursor.close()
     db.close()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     # Check if all three arguments are provided
     if len(sys.argv) != 4:
         print("Usage: python3 script.py <username> <password> <database>")
