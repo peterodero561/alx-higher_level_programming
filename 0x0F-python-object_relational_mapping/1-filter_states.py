@@ -22,7 +22,7 @@ def listStatesN(username, password, database):
 
     # Display the results
     for state in states:
-        print(state)
+        print(state[::-1])
 
     # Close cursor and database connection
     cursor.close()
