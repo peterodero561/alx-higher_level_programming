@@ -31,7 +31,7 @@ def listStatesN(userName, password, database):
     db.close()
 
 
-if '__name__' == '__main__':
+if __name__ == '__main__':
     if (len(sys.argv) < 4):
         print("Fewer arguments")
         sys.exit(1)
