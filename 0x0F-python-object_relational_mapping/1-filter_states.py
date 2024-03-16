@@ -18,8 +18,8 @@ def listStatesN(userName, password, database):
 
     # SQL statement to get states
     cursor.execute(
-            "SELECT * FROM states
-            WHERE state.name LIKE 'N%' ORDER BY states.id ASC")
+            "SELECT * FROM states "
+            "WHERE state.name LIKE 'N%' ORDER BY states.id ASC")
 
     # Fetch and print all the states
     states = cursor.fetchall()
@@ -31,7 +31,7 @@ def listStatesN(userName, password, database):
     db.close()
 
 
-if '__name__' = '__main__':
+if '__name__' == '__main__':
     if (len(sys.argv) < 4):
         print("Fewer arguments")
         sys.exit(1)
