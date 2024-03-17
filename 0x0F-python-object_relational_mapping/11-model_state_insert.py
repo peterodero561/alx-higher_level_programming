@@ -20,7 +20,7 @@ def addState(username, password, database):
     # Create a session
     Session = sessionmaker(bind=engine)
     session = Session()
-    
+
     # create new object and add to session
     newState = State(name='Louisiana')
     session.add(newState)
