@@ -7,11 +7,13 @@ from model_city import City
 from sqlalchemy import create_engine, select
 from sqlalchemy.orm import sessionmaker
 
-def listCity(username,password, database):
+
+def listCity(username, password, database):
     '''List city objects'''
     # connct to database
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
-            .format(username, password, database), pool_pre_ping=True)
+    engine = create_engine(
+            'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+                username, password, database), pool_pre_ping=True)
 
     # create a session
     Session = sessionmaker(bind=engine)
@@ -30,7 +32,7 @@ def listCity(username,password, database):
 
 if __name__ == '__main__':
     if (len(sys.argv) < 4):
-        print('Usage: ./14-model_city_fetch_by_state username password database')
+        print('Fewer arguments')
         sys.exit(1)
 
     # assignment
